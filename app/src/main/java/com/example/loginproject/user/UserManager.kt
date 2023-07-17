@@ -3,6 +3,7 @@ package com.example.loginproject.user
 import android.content.Context
 import android.util.Log
 import com.example.loginproject.file.FileManager
+import com.example.loginproject.tool.MyLog
 import java.lang.ref.WeakReference
 
 class UserManager private constructor(private val context: WeakReference<Context>){
@@ -28,7 +29,7 @@ class UserManager private constructor(private val context: WeakReference<Context
     fun loadAllUserInfo(){
         fileManager.readData(context.get()!!).also {
             users.addAll(it)
-            Log.v("pxd","$users")
+            MyLog.v("$users")
         }
     }
 
