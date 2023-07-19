@@ -8,6 +8,94 @@
     android:background="@color/dark_blue"
     tools:context=".view.fragments.PinLoginFragment">
 
+    <TextView
+        style="@style/TextTitleStyle"
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/welcome_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        style="@style/SubtitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/register_subtitle"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+
+
+    <TextView
+        android:id="@+id/switchToPatternTextView"
+        style="@style/AlertTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="切换到图案解锁"
+        app:layout_constraintEnd_toEndOf="@+id/subtitleTextView"
+        app:layout_constraintStart_toStartOf="@+id/subtitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleTextView" />
+
+    <View
+        android:id="@+id/roundBgView"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/shape_round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchToPatternTextView" />
+
+    <com.example.loginproject.view.views.UserInputView
+        android:id="@+id/nameInputView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="@+id/roundBgView"
+        app:layout_constraintStart_toStartOf="@+id/roundBgView"
+        app:layout_constraintTop_toTopOf="@+id/roundBgView" />
+
+    <com.example.loginproject.view.views.UserInputView
+        android:id="@+id/passwordInputView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="@+id/roundBgView"
+        app:layout_constraintStart_toStartOf="@+id/roundBgView"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputView" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="@color/light_blue"
+        android:background="@drawable/shape_button_round_corner"
+        android:text="@string/login_title"
+        android:textColor="@color/text_white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/roundBgView"
+        app:layout_constraintEnd_toEndOf="@+id/roundBgView"
+        app:layout_constraintStart_toStartOf="@+id/roundBgView"
+        app:layout_constraintTop_toBottomOf="@+id/roundBgView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
