@@ -25,7 +25,7 @@ class PinLoginFragment : Fragment() {
         //不同点
         //调用情况
         view.setOnClickListener {
-            navigateTo(PinRegisterFragment(), true)
+            navigateTo(PinRegisterFragment())
         }
     }
 }
